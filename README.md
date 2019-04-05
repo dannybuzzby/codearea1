@@ -11,3 +11,5 @@ I utilised jquery for
 - Slider manipulation
 
 The .js files were not composed by myself but rather the design company that spearheaded the design of the new forestry site
+
+The Forestry Commission site is styled using SCSS. we include mixins and nested styles. We use variables for media queries and styles. REM values are used for most of the fonts. The commission is in the process of convertinf all text font sizes to REM from PX.
