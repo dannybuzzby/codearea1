@@ -1,0 +1,135 @@
+.component-inaturalist {
+  @include component();
+  @include component--full-width();
+
+  &__tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    > div {
+      padding: 15px 22px 7px;
+      flex: 1 1 30%;
+      margin: 0;
+
+      @media all and (min-width: $brk-md) {
+        flex: 1 1 20%;
+        margin: 0 6px 0 0;
+        padding: 15px 0 5px 22px;
+      }
+    }
+  }
+
+  &__subtitle {
+    padding: 0 22px;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  &__tab--observations h2,
+  &__tab--species h2,
+  &__tab--identifiers h2,
+  &__tab--observers h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+  &__tab--observations div,
+  &__tab--species div,
+  &__tab--identifiers div,
+  &__tab--observers div {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: $dark-grey;
+  }
+
+  &__title {
+    padding: 22px 22px 10px;
+
+    h2 {
+      @media screen and (min-width: $brk-tab) {
+        font-size: 36px;
+      }
+    }
+  }
+
+  &__map {
+    height: 393px;
+  }
+
+  &__loading {
+    text-align: center;
+  }
+
+  &__info {
+    position: absolute;
+    background-color: $white;
+    z-index: 1;
+    font-size: 0.9rem;
+    height: 24.6rem;
+    display: none;
+    width: 100%;
+
+    @media all and (min-width: $brk-500) {
+      width: 500px;
+    }
+
+    h2 {
+      margin: 0;
+      height: 25px;
+      padding: 25px 100px 20px 22px;
+      background-color: $fe-green;
+      color: $white;
+      font-size: $font-size-s;
+      line-height: 1rem;
+      -webkit-text-size-adjust: 100%;
+
+      @media all and (min-width: $brk-500) {
+        font-size: $font-size-l;
+      }
+    }
+
+    table td div {
+      margin-top: 0.5rem
+    }
+
+    table {
+      margin: 22px;
+      padding-bottom: 20px;
+    }
+
+    img {
+      border: 2px solid $fe-outline;
+      margin: 0.825rem 1rem 1rem 0;
+    }
+
+    @media all and (min-width: $brk-500) {
+      font-size: initial;
+    }
+  }
+
+  &__close {
+    padding: 5px 22px;
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    color: $white;
+    text-decoration: none;
+    font-family: $font-size-s;
+    -webkit-text-size-adjust: 100%;
+
+    &::before {
+      content: "X ";
+    }
+
+    &:hover, &:focus {
+      text-decoration: underline;
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * An embedded Google Map with an iNaturalist KML feed overlaid.
+ *
+ * Expected variables:
+ * - title: text.
+ * - project: The iNaturalist project name.
+ * - scheme: (optional) string. Which colour scheme should be used. Accepts 'light', 'dark', 'grey', 'green'. Defaults to light.
+ * - overlap: (optional) string. Which overlap style to use. Accepts 'no-overlap', 'up', 'down'. Defaults to no-overlap.
+ *
+ * @see fe_components_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{{ attach_library('fe_components/inaturalist') }}
+
+<div class="component-inaturalist" data-inaturalist-project="{{ project_id }}">
+
+    {% if title %}<div class="component-inaturalist__title"><h2>{{ title|render|striptags|trim|raw }}</h2></div>{% endif %}
+
+    <div class="component-inaturalist__container">
+        <div class="component-inaturalist__tabs">
+            {# Observations data must be available for KML pagination. All others are optional. #}
+            {% if labels.observations %}
+                <div class="component-inaturalist__tab component-inaturalist__tab--observations" data-id="observations" data-endpoint="observations" data-label="{{ labels.observations }}"></div>
+            {% else %}
+                <div class="component-inaturalist__tab" style="display: none;" data-id="observations" data-endpoint="observations"></div>
+            {% endif %}
+            {% if labels.species %}<div class="component-inaturalist__tab component-inaturalist__tab--species" data-id="species" data-endpoint="observations/species_counts" data-label="{{ labels.species }}"></div>{% endif %}
+            {% if labels.identifiers %}<div class="component-inaturalist__tab component-inaturalist__tab--identifiers" data-id="identifiers" data-endpoint="observations/identifiers" data-label="{{ labels.identifiers }}"></div>{% endif %}
+            {% if labels.observers %}<div class="component-inaturalist__tab component-inaturalist__tab--observers" data-id="observers" data-endpoint="observations/observers" data-label="{{ labels.observers }}"></div>{% endif %}
+        </div>
+        <div class="component-inaturalist__info"></div>
+        <div class="component-inaturalist__map">
+            <p class="component-inaturalist__loading">Loading...</p>
+        </div>
+    </div>
+</div>
