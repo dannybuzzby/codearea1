@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Subscription Management Centre</title>
+        <style type="text/css">
+
+	a {
+	color: #60a62a;
+	font-weight: bold;
+	}
+	
+	h2 {
+	color: #01613b;
+	}
+
+	.wrapper {
+	width: 100%;
+	background-color: #eaeef1;
+	font-family: Calibri, sans-serif;
+	}
+	
+	.gridview {
+	width: 100%;
+	padding: 10px;
+	background-color: #eaeef1;
+	margin-left: 30%;
+	margin-right: 30%;
+	}
+	
+	.card {
+	width: 40%;
+	height: auto;
+	display: inline-block;
+	background-color: #fff;
+	color: #000;
+	margin: 5px;
+	position: relative;
+	-webkit-box-shadow: 0px 4px 4px -2px rgba(0,0,0,0.53);
+	-moz-box-shadow: 0px 4px 4px -2px rgba(0,0,0,0.53);
+	box-shadow: 0px 4px 4px -2px rgba(0,0,0,0.53);
+	vertical-align: top;
+	}
+	
+	#card2 {
+	display: block;
+	width: 40%;
+	}
+	
+	#card2 p, h2 {
+	padding-left: 20px;
+	padding-right: 20px;
+	}
+
+	img {
+	width: 100%;
+	}
+	
+	.containlabel1 {	
+	margin: 5px 20px 10px;
+	height: 42px;
+	width: 40%;
+	}
+	
+	.containlabel1 label {
+    display:block;
+	}
+	
+
+
+	
+	.card p, h2 {
+	padding-left: 20px;
+	padding-right: 20px;
+	}
+	
+	
+	.containlabel {	
+	margin: 2px;
+	}
+
+	
+	input[type=text] {
+	height: 30px;
+	width: 100%;
+
+	}
+	
+	.divwrap {
+	padding: 10px 20px 10px 20px;
+	}
+	
+	#left{
+    float: right;
+    height:auto;
+	width: 50%;
+ 
+}
+
+	#right{
+		float: right;
+		height:auto;
+		width: 50%;
+	}
+
+	#foot {
+	clear: both;
+	}
+	
+	
+	
+		
+
+.button input[type=submit] {
+	border: none;
+	width: 90%;
+	border-radius: 3px; 
+	-webkit-box-shadow: -1px 3px 9px -1px rgba(0,0,0,0.51);
+	-moz-box-shadow: -1px 3px 9px -1px rgba(0,0,0,0.51);
+	box-shadow: -1px 3px 9px -1px rgba(0,0,0,0.51););
+	color:#fff;
+	height: 43px;
+	background: #60a62a;
+	margin: 15px;
+	font-size: 20px;
+}
+
+.button input[type=submit]:hover {
+	-webkit-box-shadow: -1px 3px 9px -1px rgba(0,0,0,0.51);
+	-moz-box-shadow: -1px 3px 9px -1px rgba(0,0,0,0.51);
+	box-shadow: -1px 3px 9px -1px rgba(0,0,0,0.51););
+	background: #4CAFC1;	
+}
+
+.button input[type=text] {
+	border: none;
+	width: 680px;
+	-webkit-box-shadow: -1px 3px 9px -1px rgba(0,0,0,0.51);
+	-moz-box-shadow: -1px 3px 9px -1px rgba(0,0,0,0.51);
+	box-shadow: -1px 3px 9px -1px rgba(0,0,0,0.51););
+	height: 40px;
+	background: #fff;
+}
+
+
+
+
+
+@media screen and (max-width: 1040px) and (min-width: 240px) {
+   .gridview {
+	margin-left: 10px;
+	margin-right: 10px;
+}	
+	.card {
+	width: 92%;
+	}
+	
+	#card2 {
+	width: 92%;}
+	
+	p, h2 {
+	padding-top:5px;
+	padding-bottom: 5px;
+	}
+
+	
+}
+
+
+@media screen and (max-width: 460px) and (min-width: 200px) {
+	.containlabel1 {	
+	margin: 20px;
+	height: 42px;
+	width: 80%;
+	}
+}
+
+
+	</style>
+    </head>
+    <body>
+        <form method="post" action="http://www.pages05.net/forestrycommission/moreinfo/subscribers_form/" onx="return validateForm();">
+            <div class="wrapper">
+            <div class="gridview">
+            <div id="card1" class="card">
+            <h2>Update your information</h2>
+            <p>Let us know who you are, and where to send our digital updates!</p>
+            <div>
+            <div>
+            <div class="containlabel1" style="float: left; margin-right: 20px"><label for="FirstName">First name<span style="color: #ff6600">*</span></label> <input id="Firstname" required="" name="Firstname" type="text" /></div>
+            <div class="containlabel1" style="float: left; margin-right: 20px"><label for="Lastname">Last name<span style="color: #ff6600">*</span></label> <input id="Lastname" required="" name="Lastname" type="text" /></div>
+            <br style="clear: both" />
+            &nbsp;</div>
+            <div id="Email">
+            <div class="containlabel1" style="float: left; margin-right: 20px"><label for="email">Email<span style="color: #ff6600">*</span></label> <input id="control_EMAIL" class="textInput defaultText" required="" label="Email" name="Email" type="text" /></div>
+            <div class="containlabel1" style="float: left; margin-right: 20px"><label for="postcode">Postcode<span style="color: #ff6600">*</span></label> <input id="postcode" required="" name="postcode" type="text" /></div>
+            </div>
+            <br style="clear: both" />
+            <h2>What interests you?</h2>
+            <p>The more you tell us about what interests you, the more personal our conversation can be! Choose as many as you would like from the following interest groups. We'll send you content based on these choices.</p>
+            <div class="divwrap">
+            <div id="left">
+            <div class="containlabel"><input id="Gruffalo" type="checkbox" name="Gruffalo" value="Yes" /> <label for="Gruffalo">Gruffalo</label></div>
+            <br style="clear: both" />
+            <div class="containlabel"><input id="Horseriding" type="checkbox" name="Horseriding" value="Yes" /> <label for="Horseriding">Horse riding</label></div>
+            <br style="clear: both" />
+            <div class="containlabel"><input id="Mountainbiking" type="checkbox" name="Mountainbiking" value="Yes" /> <label for="Mountainbiking">Mountain biking</label></div>
+            <br style="clear: both" />
+            <div class="containlabel"><input id="Stickman" type="checkbox" name="StickMan" value="Yes" /> <label for="Stickman">Stick Man</label></div>
+            <br style="clear: both" />
+            <div class="containlabel"><input id="Volunteering" type="checkbox" name="Volunteering" value="Yes" /> <label for="Volunteering">Volunteering</label></div>
+            <br style="clear: both" />
+            <div class="containlabel"><input id="Walking" type="checkbox" name="Walking" value="Yes" /> <label for="Walking">Walking</label></div>
+            <br style="clear: both" />
+            <div class="containlabel"><input id="Wildlife" type="checkbox" name="Wildlife" value="Yes" /> <label for="Wildlife">Wildlife</label></div>
+            </div>
+            <div id="right">
+            <div class="containlabel"><input id="Art" type="checkbox" name="Art" value="Yes" /> <label for="Art">Art</label></div>
+            <br style="clear: both" />
+            <div class="containlabel"><input id="Childrensactivities" type="checkbox" name="Childrensactivities" value="Yes" /> <label for="Childrensactivities">Childrens activities</label></div>
+            <br style="clear: both" />
+            <div class="containlabel"><input id="Dogs" type="checkbox" name="Dogs" value="Yes" /> <label for="Dogs">Dogs</label></div>
+            <br style="clear: both" />
+            <div class="containlabel"><input id="Familycycling" type="checkbox" name="Familycycling" value="Yes" /> <label for="Familycycling">Family cycling</label></div>
+            <br style="clear: both" />
+            <div class="containlabel"><input id="Forest fitness" type="checkbox" name="Forest fitness" value="Yes" /> <label for="Forest fitness">Forest fitness</label></div>
+            <br style="clear: both" />
+            <div class="containlabel"><input id="ForestLive" type="checkbox" name="ForestLive" value="Yes" /> <label for="ForestLive">Forest Live concerts</label></div>
+            <br style="clear: both" />
+            <div class="containlabel"><input id="GoApe" type="checkbox" name="GoApe" value="Yes" /> <label for="GoApe">Go Ape Tree Top Adventure</label></div>
+            <div style="display: none"><input id="Whatform" type="checkbox" name="Whatform" value="Yes" /> <label for="Whatform">&nbsp;</label></div>
+            <div style="display: none"><input id="consent" type="checkbox" name="consent" value="Yes" /> <label for="consent">&nbsp;</label></div>
+            <br style="clear: both" />
+            &nbsp;</div>
+            <div id="foot">
+            <div class="button"><input id="button" class="defaultText buttonStyle" type="submit" value="Sign up" /></div>
+            <sup style="font-size: 0.8em; color: #555">
+            <p><strong>How we will use the information you provide?</strong></p>
+            <p>We will use your information to send you relevant marketing information, including resources, competitions, offers, and updates from our forests. This may include emails or social media posts. We may also personalise your experience on the website, so you can quickly find the content most relevant to you! <a href="https://www.forestry.gov.uk/forestry/infd-52ybs4" name="httpswwwforestrygovukforestryinfd52ybs4" xthyperlink="2969032" xt="SPCLICK" xtlinkname="httpswwwforestrygovukforestryinfd52ybs4">More information about how we handle your data</a>.</p>
+            <p>The Forestry Commission is registered as a data controller under the Data Protection Act 1998 (Registration No: Z6542658). You have the right to opt out from receiving marketing information at any time by contacting us, or lodge a complaint with the Information Commissioner&rsquo;s Office: https://ico.org.uk</p>
+            </sup></div>
+            </div>
+            </div>
+            </div>
+            <div id="card2" class="card">
+            <p style="padding-bottom: 20px; padding-top: 20px; padding-left: 20px; padding-right: 20px">Did you know we also have a quarterly Schools and Learning newsletter? If you're a teacher or learning provider <a xt="SPCLICK" xthyperlink="2969033" xtlinkname="httpwwwforestrygovukwebsiteforestrynsfbyuniqueBEEH9UXLU4" href="http://www.forestry.gov.uk/website/forestry.nsf/byunique/BEEH-9UXLU4" name="httpwwwforestrygovukwebsiteforestrynsfbyuniqueBEEH9UXLU4">sign up here</a>.</p>
+            </div>
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script><script type="text/javascript">
+
+$(function(){
+       $('input, select', 'form:hidden').each(function(){
+              if($(this).is(':radio')){
+                     var val = $(this).val();
+                     $('input[name="' + $(this).attr('name') + '"]', 'form:visible').each(function(){
+                           if($(this).val() == val) $(this).attr('checked', 'checked');
+                     });
+              } else if($(this).is(':checkbox') && $(this).attr('checked')){
+                     $('input[name="' + $(this).attr('name') + '"]', 'form:visible').attr('checked', 'checked');
+              } else {
+                     $('[name="' + $(this).attr('name') + '"]', 'form:visible').val($(this).val());    
+              }
+      });
+});
+</script><script>
+function myFunction(elmnt,clr) {
+    elmnt.style.color = clr;
+}
+</script></div>
+            </div>
+        </form>
+    </body>
+</html>
